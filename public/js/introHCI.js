@@ -10,4 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$("button.likeBtn").click(likeClick);
+}
+
+function likeClick(e) {
+	//prevent the page from reloading
+	e.preventDefault();
+
+	ga("send", "event", 'like', 'click');
 }
